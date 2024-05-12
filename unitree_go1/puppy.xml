@@ -1,0 +1,63 @@
+<mujoco model="puppy">
+  <compiler angle="radian"/>
+  <asset>
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="lb_link1" file="lb_link1.STL"/>
+    <mesh name="lb_link2" file="lb_link2.STL"/>
+    <mesh name="rb_link1" file="rb_link1.STL"/>
+    <mesh name="rb_link2" file="rb_link2.STL"/>
+    <mesh name="rf_link1" file="rf_link1.STL"/>
+    <mesh name="rf_link2" file="rf_link2.STL"/>
+    <mesh name="lf_link1" file="lf_link1.STL"/>
+    <mesh name="lf_link2" file="lf_link2.STL"/>
+    <mesh name="camera_link" file="camera_link.STL"/>
+  </asset>
+  <worldbody>
+    <geom pos="0 0 0.11" type="mesh" rgba="0 0 0 1" mesh="base_link"/>
+    <geom pos="0 -0.100687 0.12711" quat="0.999853 0.017126 0 0" type="mesh" rgba="0 0 0 1" mesh="camera_link"/>
+    <body name="lb_link1" pos="0.0420106 0.0778693 0.125988" quat="0.930141 -0.367203 0 0">
+      <inertial pos="0.0139911 0.0129617 -0.0150641" quat="0.681953 0.285067 -0.259509 0.621555" mass="0.0101535" diaginertia="5.0547e-06 4.74867e-06 7.53492e-07"/>
+      <joint name="lb_joint1" pos="0 0 0" axis="1 0 0" limited="true" range="-2 2"/>
+      <geom type="mesh" rgba="0 0 0 1" mesh="lb_link1"/>
+      <body name="lb_link2" pos="0.0120499 0.0525236 -0.0528775">
+        <inertial pos="0.000397966 -0.0498531 -0.0493138" quat="0.928207 -0.35834 0.0601905 0.0800115" mass="0.0445559" diaginertia="1.15934e-05 1.14772e-05 2.56752e-07"/>
+        <joint name="lb_joint2" pos="0 0 0" axis="1 0 0" limited="true" range="-2 2"/>
+        <geom type="mesh" rgba="0 0 0 1" mesh="lb_link2"/>
+        <geom size="0.0095 0.005" pos="0.0032 -0.0537033 -0.0522891" quat="0.65427 0.268941 0.653749 0.268727" type="cylinder"/>
+      </body>
+    </body>
+    <body name="rb_link1" pos="-0.0420106 0.0778693 0.125988" quat="0.930141 -0.367203 0 0">
+      <inertial pos="-0.0139912 0.0129616 -0.0150641" quat="0.621547 0.25951 -0.285066 0.681961" mass="0.0101536" diaginertia="5.05471e-06 4.74867e-06 7.53497e-07"/>
+      <joint name="rb_joint1" pos="0 0 0" axis="1 0 0" limited="true" range="-2 2"/>
+      <geom type="mesh" rgba="0 0 0 1" mesh="rb_link1"/>
+      <body name="rb_link2" pos="-0.0185499 0.0525236 -0.0528775">
+        <inertial pos="0.000397966 -0.0498531 -0.0493138" quat="0.928207 -0.35834 0.0601905 0.0800115" mass="0.0445559" diaginertia="1.15934e-05 1.14772e-05 2.56752e-07"/>
+        <joint name="rb_joint2" pos="0 0 0" axis="1 0 0" limited="true" range="-2 2"/>
+        <geom type="mesh" rgba="0 0 0 1" mesh="rb_link2"/>
+        <geom size="0.0095 0.005" pos="0.0032 -0.0537033 -0.0522891" quat="0.65427 0.268941 0.653749 0.268727" type="cylinder"/>
+      </body>
+    </body>
+    <body name="rf_link1" pos="-0.0420105 -0.0778693 0.120651" quat="0.930141 -0.367203 0 0">
+      <inertial pos="-0.0139912 0.0129616 -0.0150641" quat="0.621547 0.25951 -0.285066 0.681961" mass="0.0101536" diaginertia="5.05471e-06 4.74867e-06 7.53497e-07"/>
+      <joint name="rf_joint1" pos="0 0 0" axis="1 0 0" limited="true" range="-2 2"/>
+      <geom type="mesh" rgba="0 0 0 1" mesh="rf_link1"/>
+      <body name="rf_link2" pos="-0.0185499 0.0525236 -0.0528775">
+        <inertial pos="0.000397966 -0.0498531 -0.0493138" quat="0.928207 -0.35834 0.0601905 0.0800115" mass="0.0445559" diaginertia="1.15934e-05 1.14772e-05 2.56752e-07"/>
+        <joint name="rf_joint2" pos="0 0 0" axis="1 0 0" limited="true" range="-2 2"/>
+        <geom type="mesh" rgba="0 0 0 1" mesh="rf_link2"/>
+        <geom size="0.0095 0.005" pos="0.0032 -0.0537033 -0.0522891" quat="0.65427 0.268941 0.653749 0.268727" type="cylinder"/>
+      </body>
+    </body>
+    <body name="lf_link1" pos="0.0420105 -0.0778693 0.120651" quat="0.930141 -0.367203 0 0">
+      <inertial pos="0.0139911 0.0129616 -0.0150641" quat="0.681953 0.285067 -0.259509 0.621556" mass="0.0101536" diaginertia="5.05473e-06 4.74868e-06 7.53497e-07"/>
+      <joint name="lf_joint1" pos="0 0 0" axis="1 0 0" limited="true" range="-2 2"/>
+      <geom type="mesh" rgba="0 0 0 1" mesh="lf_link1"/>
+      <body name="lf_link2" pos="0.0120499 0.0525236 -0.0528775">
+        <inertial pos="0.000397966 -0.0498531 -0.0493138" quat="0.928207 -0.35834 0.0601905 0.0800115" mass="0.0445559" diaginertia="1.15934e-05 1.14772e-05 2.56752e-07"/>
+        <joint name="lf_joint2" pos="0 0 0" axis="1 0 0" limited="true" range="-2 2"/>
+        <geom type="mesh" rgba="0 0 0 1" mesh="lf_link2"/>
+        <geom size="0.0095 0.005" pos="0.0032 -0.0537033 -0.0522891" quat="0.65427 0.268941 0.653749 0.268727" type="cylinder"/>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
